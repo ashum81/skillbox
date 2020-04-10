@@ -1,0 +1,26 @@
+{
+  "name": "gol",
+  "version": "1.0.0",
+  "description": "Multiplayer Game of Life",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "author": "Ron Lee",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^7.2.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/kwanhon/gol"
+  }
+}

@@ -1,0 +1,33 @@
+#app {
+    text-align: center;
+    padding-top: 48px;
+}
+table {
+    margin: 8px auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #CCC;
+
+    -webkit-transition: background-color 150ms linear;
+    -moz-transition: background-color 150ms linear;
+    -o-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+.selected {
+    background-color: #CCCCCC !important;
+}
+#toolbar {
+    margin: 16px 0;
+}
+.color-box {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 16px 0 8px;
+}

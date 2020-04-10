@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Game of Life</h1>
+            <table>
+                <tr v-for="(row, i) in rows">
+                    <td v-for="(col, j) in cols"
+                        @click="selectCell(i, j)" 
+                        :class="isSelected(i, j) ? 'selected' : ''"
+                        :style="grid[i] && grid[i][j] ? `background-color:${grid[i][j]}`:''">
+                    </td>
+                </tr>
+            </table>
+            <div>My Color <span class="color-box" :style="client ? `background-color:${client.color}`:''"></span></div>
+            <div id="toolbar" >
+                <button class="uk-button uk-button-default" @click="addSelectedCells()">Add Selected Cells</button>
+                <button class="uk-button uk-button-default" @click="addPattern('boat')">Add 'Boat'</button>
+                <button class="uk-button uk-button-default" @click="addPattern('blinker')">Add 'Blinker'</button>
+                <button class="uk-button uk-button-default" @click="addPattern('toad')">Add 'Toad'</button>
+            </div>
+            <div>
+                To place the cells, please select the cells first, then click the "Add Selected Cells"<br>
+                You can also insert patterns by clicking different pattern buttons<br>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="js/logic.js" ></script>
+        <script src="js/main.js" ></script>
+    </body>
+</html>
